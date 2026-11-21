@@ -8,7 +8,8 @@
     "typecheck": "tsc --noEmit",
     "db:create": "wrangler d1 create textbook-returns-db",
     "db:migrate": "wrangler d1 migrations apply DB --remote",
-    "deploy": "vite build && wrangler deploy"
+    "deploy": "vite build && wrangler deploy",
+    "cf:deploy": "wrangler d1 migrations apply DB --remote && wrangler deploy"
   },
   "dependencies": {
     "@tanstack/react-query": "5.101.2",
