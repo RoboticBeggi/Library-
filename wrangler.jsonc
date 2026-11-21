@@ -1,0 +1,22 @@
+{
+  // Cloudflare settings for Textbook Returns.
+  "name": "textbook-returns",
+  "main": "dist/server/server.js",
+  "compatibility_date": "2025-05-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "./dist/client",
+    "binding": "ASSETS",
+    "not_found_handling": "none"
+  },
+  "vars": { "HF_ENV": "production" },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "textbook-returns-db",
+      // STEP: paste the database_id that `npm run db:create` prints, replacing the zeros.
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "migrations"
+    }
+  ]
+}
